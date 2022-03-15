@@ -1,0 +1,36 @@
+/Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar
+./mr-jobhistory-daemon.sh stop historyserver
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar BloomFilterSourceDestTest.Driver /project/data/1987.csv /Project_mapReduce/BloomFilterSourceDestTest
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar YrDelayAndScheduledFlights.DelayDriver /project/data /Project_mapReduce/YrDelayAndScheduledFlights
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar busyAirport.Driver /project/data /Project_mapReduce/busyAirport
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar flightDistanceSDMed.DistanceDriver /project/data /Project_mapReduce/flightDistanceSDMed
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar monthCounter.monthDriver /project/data /Project_mapReduce/monthCounter
+
+hadoop jar /Users/ajaygoel/Documents/Neu/BigData/Project/Final_Project/target/Project-1.0-SNAPSHOT.jar srcDstInvertedIndex.srcDstDriver /project/data/1987.csv /Project_mapReduce/srcDstInvertedIndex
+
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar totalDataByYear.Driver /project/data /Project_mapReduce/totalDataByYear
+
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar uniqueSourceAirport.Driver /project/data /Project_mapReduce/uniqueSourceAirport
+
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar worst20SourceAirport.Driver /project/data /Project_mapReduce/worst20SourceAirportMaxDelay
+
+===
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar BinningCancellationCategories.Binning /project/data/1987.csv /Project_mapReduce/BinningCancellationCategories
+
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar busyAirport.Driver /project/data /Project_mapReduce/busyAirport
+
+hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar top10srcDstFlights.Driver /project/data /Project_mapReduce/top10srcDstFlights
+
+ hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar airlinehierarchical.AirlineHierarchical2 /project/data2/airports.csv /Project_mapReduce/StateHierarchical
+
+ hadoop jar /Users/ajaygoel/.m2/repository/Final_Project/Project/1.0-SNAPSHOT/Project-1.0-SNAPSHOT.jar InnerJoinCarrierSrcDst.Driver /project/data/1987.csv /project/data2/carriers.csv /Project_mapReduce/InnerJoinCarrierSrcDst
+
+busyAirport.Driver s3://ajay-goel-bigdata/1995.csv s3://ajay-goel-bigdata/
+
+busyAirport.Driver s3://ajay-goel-bigdata/1995.csv s3://ajay-goel-bigdata/output
+

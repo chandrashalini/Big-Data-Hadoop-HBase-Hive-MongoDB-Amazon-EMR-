@@ -1,0 +1,25 @@
+CREATE (n:Flights { Origin: 'SAN', Destination: 'SFO' })
+CREATE (n:Flights { Origin: 'IGI', Destination: 'SFO' })
+CREATE (n:Flights { Origin: 'DC', Destination: 'PDX' })
+CREATE (n:Flights { Origin: 'JFK', Destination: 'IND' })
+CREATE (n:Flights { Origin: 'PDX', Destination: 'LAS' })
+CREATE (n:Flights { Origin: 'OHG', Destination: 'IND' })
+
+
+MATCH (a:Flights),(b:Flights)
+WHERE a.Origin = 'SAN' AND b.Destination = 'IND'
+CREATE (a)-[r:RELTYPE { name: a.Origin + '<->' + b.Destination }]->(b)
+RETURN type(r), r.Origin
+
+MATCH (a:Flights),(b:Flights)
+WHERE a.Origin = 'OHG' AND b.Origin = 'PDX'
+CREATE (a)-[r:RELTYPE { name: a.Origin + '<->' + b.Origin }]->(b)
+RETURN type(r), r.Origin
+
+
+CREATE (n:Person { name: 'Andy', title: 'Developer' })
+
+MATCH (a:Person),(b:Person)
+WHERE a.name = 'A' AND b.name = 'B'
+CREATE (a)-[r:RELTYPE]->(b)
+RETURN type(r)
